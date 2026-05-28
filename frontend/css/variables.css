@@ -1,0 +1,52 @@
+:root {
+  /* ── Backgrounds ─────────────────────────────────────── */
+  --bg-primary:      #0e0e11;
+  --bg-secondary:    #18181d;
+  --bg-tertiary:     #1f1f26;
+  --bg-hover:        #26262f;
+  --bg-active:       #2a2a35;
+
+  /* ── Text ────────────────────────────────────────────── */
+  --text-primary:    #f0f0f4;
+  --text-secondary:  #9090a0;
+  --text-muted:      #55556a;
+
+  /* ── Accent ──────────────────────────────────────────── */
+  --accent:          #00d4aa;
+  --accent-hover:    #00bfa0;
+  --accent-dim:      rgba(0, 212, 170, 0.14);
+  --accent-glow:     rgba(0, 212, 170, 0.06);
+
+  /* ── Message bubbles ─────────────────────────────────── */
+  --bubble-sent:     #00d4aa;
+  --bubble-sent-fg:  #001a14;
+  --bubble-recv:     #2a2a38;
+  --bubble-recv-fg:  #f0f0f4;
+
+  /* ── Status ──────────────────────────────────────────── */
+  --online:          #22c55e;
+  --danger:          #ef4444;
+  --warning:         #f59e0b;
+
+  /* ── Borders ─────────────────────────────────────────── */
+  --border:          rgba(255, 255, 255, 0.07);
+  --border-hover:    rgba(255, 255, 255, 0.12);
+
+  /* ── Sizing ──────────────────────────────────────────── */
+  --sidebar-w:       320px;
+  --radius-bubble:   20px;
+  --radius-input:    24px;
+  --radius-md:       12px;
+  --radius-sm:       8px;
+  --radius-xs:       6px;
+
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-sm:       0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:       0 4px 20px rgba(0,0,0,0.6);
+
+  /* ── Transitions ─────────────────────────────────────── */
+  --ease:            cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast:          130ms;
+  --t-base:          220ms;
+  --t-slow:          400ms;
+}
