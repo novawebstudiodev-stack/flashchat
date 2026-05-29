@@ -1,0 +1,65 @@
+/* Mobile: < 768px — full-screen panels, no split view */
+@media (max-width: 768px) {
+
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar takes full screen */
+  .sidebar {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    width: 100%;
+    transition: transform var(--t-base) var(--ease);
+  }
+
+  /* Hide sidebar when chat is open */
+  .sidebar--hidden {
+    transform: translateX(-100%);
+    pointer-events: none;
+  }
+
+  /* Chat panel takes full screen */
+  .chat-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    transition: transform var(--t-base) var(--ease);
+  }
+
+  /* Hide chat panel when sidebar is shown */
+  .chat-panel.hidden {
+    display: flex !important; /* override .hidden */
+    transform: translateX(100%);
+    pointer-events: none;
+  }
+
+  /* Show back button on mobile */
+  .back-btn { display: grid; }
+
+  /* Bigger touch targets */
+  .conv-item    { padding: 12px 16px; }
+  .icon-btn     { width: 44px; height: 44px; }
+  .btn--send    { width: 46px; height: 46px; }
+  .compose      { padding: 10px 10px 14px; }
+
+  /* Message max-width wider on mobile */
+  .message      { max-width: 85%; }
+  .message__image-wrapper { max-width: 240px; }
+
+  /* Auth card full-width */
+  .auth-card    { padding: 28px 20px 24px; border-radius: 16px; }
+}
+
+/* Slightly wider sidebar on tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root { --sidebar-w: 280px; }
+}
+
+/* Prevent keyboard from covering compose bar on iOS */
+@supports (-webkit-touch-callout: none) {
+  .compose {
+    padding-bottom: max(14px, env(safe-area-inset-bottom));
+  }
+}

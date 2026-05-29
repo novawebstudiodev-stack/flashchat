@@ -1,0 +1,51 @@
+/* ── Message enter ────────────────────────────────────────── */
+@keyframes msg-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* ── Message delete (fade-out + collapse) ─────────────────── */
+@keyframes msg-out {
+  0%   { opacity: 1; transform: scale(1);    max-height: 300px; margin-bottom: 4px; }
+  50%  { opacity: 0; transform: scale(0.92); }
+  100% { opacity: 0; max-height: 0;          margin-bottom: 0; padding: 0; }
+}
+.message--fading {
+  animation: msg-out 480ms var(--ease) forwards;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ── Typing dots ──────────────────────────────────────────── */
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.4; }
+  30%            { transform: translateY(-5px); opacity: 1; }
+}
+
+/* ── Auth card entrance ───────────────────────────────────── */
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)     scale(1); }
+}
+
+/* ── Search results slide in ──────────────────────────────── */
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.search-results:not(.hidden) {
+  animation: dropdown-in var(--t-fast) var(--ease);
+}
+
+/* ── Sidebar conv item hover pulse ───────────────────────── */
+.conv-item--active { position: relative; }
+.conv-item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 0 2px 2px 0;
+}
